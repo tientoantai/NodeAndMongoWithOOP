@@ -1,0 +1,6 @@
+{
+  "key": {
+    "env": "APP_KEY",
+    "default": "SomeRandomKey"
+  }
+}

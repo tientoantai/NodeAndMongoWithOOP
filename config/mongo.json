@@ -1,0 +1,6 @@
+{
+  "url": {
+    "env": "MONGO_URL",
+    "default": "mongodb://localhost:27017/true-banker"
+  }
+}
