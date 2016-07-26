@@ -1,13 +1,13 @@
 var express = require('express');
 var router  = express.Router();
 
-router.get('/', function (request, response) {
+var controller = require('./controller');
+var middleware = require('./middleware');
 
-    response.json({title: 'TrueBanker'});
-});
+router.get('/', controller.BookController.home);
 
-router.get('/hash', function (request, response) {
-    response.json(request.app.hasher.generate());
-});
+router.get('/add', controller.BookController.add);
+
+router.post('/book', controller.BookController.create);
 
 module.exports = router;

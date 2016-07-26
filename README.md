@@ -1,2 +1,2 @@
-# TrueBanker
-TrueBanker - VnValley &amp; VMWare co-operation  
+# Book Training by Node and Mongo
+@author TienNM
