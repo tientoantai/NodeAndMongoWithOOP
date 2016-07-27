@@ -14,3 +14,17 @@ exports.create = function (req, res) {
         res.redirect('/');
     });
 };
+
+exports.detail = function (req, res) {
+    req.app.bookRepository.detail(req.params.bookId)
+        .then(function(book){
+            res.render('detail.nj.html', {book:book});
+        });
+};
+
+exports.edit = function(req, res){
+    req.app.bookRepository.detail(req.params.bookId)
+        .then(function(book){
+            res.render('edit.nj.html', {book:book});
+        });
+}

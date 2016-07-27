@@ -1,4 +1,5 @@
-var Book = require('./book');
+var Book            = require('./book');
+var mongoObjectID   = require('mongodb');
 
 var BookRepository = function (collection){
     this.collection = collection;
@@ -16,8 +17,8 @@ BookRepository.prototype.update = function () {
 
 };
 
-BookRepository.prototype.detail = function () {
-    return this.collection.find()
+BookRepository.prototype.detail = function (bookObjectID) {
+    return this.collection.findOne({'_id': mongoObjectID.ObjectID(bookObjectID)});
 };
 
 BookRepository.prototype.search = function () {

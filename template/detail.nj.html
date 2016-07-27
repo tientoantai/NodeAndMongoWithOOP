@@ -1,0 +1,27 @@
+{% extends "layout.nj.html" %}
+{% block title %}Home Book Training{% endblock %}
+
+{% block content %}
+
+<header class="text-center">
+    <h1>Book's detail</h1>
+</header>
+<div class="container">
+    <div class="col-md-offset-3 col-md-6">
+        <dl class="dl-horizontal">
+            <dt>Name:</dt>
+            <dd>{{ book.name }}</dd>
+
+            <dt>Author:</dt>
+            <dd>{{ book.author }}</dd>
+
+            <dt>Publisher:</dt>
+            <dd>{{ book.publisher }}</dd>
+
+            <dt>Price:</dt>
+            <dd>{{ book.price }}</dd>
+        </dl>
+    </div>
+</div>
+
+{% endblock %}

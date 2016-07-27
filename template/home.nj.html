@@ -23,12 +23,12 @@
             {% for book in books %}
                 <tr>
                     <td></td>
-                    <td>{{book.name}}</td>
+                    <td><a href="/book/{{book._id}}">{{book.name}}</a></td>
                     <td>{{book.author}}</td>
                     <td>{{book.publisher}}</td>
                     <td>{{book.price}}</td>
                     <td>
-                        <button class="btn btn-primary">Edit</button>
+                        <a href="/edit/{{book._id}}" class="btn btn-primary">Edit</a>
                         <button class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
