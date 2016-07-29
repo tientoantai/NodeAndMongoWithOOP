@@ -10,6 +10,8 @@ router.get('/add', controller.BookController.add);
 
 router.get('/book/:bookId', controller.BookController.detail);
 
+router.get('/edit/:bookId', controller.BookController.edit);
+
 router.post('/book', controller.BookController.create);
 
 module.exports = router;

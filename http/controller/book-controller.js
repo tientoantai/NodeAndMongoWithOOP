@@ -27,4 +27,4 @@ exports.edit = function(req, res){
         .then(function(book){
             res.render('edit.nj.html', {book:book});
         });
-}
+};
