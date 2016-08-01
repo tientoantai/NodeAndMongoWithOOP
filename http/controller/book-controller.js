@@ -39,5 +39,4 @@ exports.search = function (req, res) {
     req.app.bookRepository.search(req.app.condition).then(function(books){
         res.render('home.nj.html', {books: books, condition: req.app.condition});
     });
-    // console.log(req.app.condition);
 };
