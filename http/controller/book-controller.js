@@ -28,3 +28,9 @@ exports.edit = function(req, res){
             res.render('edit.nj.html', {book:book});
         });
 };
+
+exports.update = function (req, res) {
+    req.app.bookRepository.update(req.body, req.params.bookId).then(function(){
+        res.redirect('/');
+    });
+};

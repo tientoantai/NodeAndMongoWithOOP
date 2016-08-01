@@ -13,8 +13,8 @@ BookRepository.prototype.add = function (book) {
     return this.collection.insert(book);
 };
 
-BookRepository.prototype.update = function () {
-
+BookRepository.prototype.update = function (book, bookObjectID) {
+    return this.collection.updateOne({'_id': mongoObjectID.ObjectID(bookObjectID)}, {$set:book  })
 };
 
 BookRepository.prototype.detail = function (bookObjectID) {

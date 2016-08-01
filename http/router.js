@@ -14,4 +14,6 @@ router.get('/edit/:bookId', controller.BookController.edit);
 
 router.post('/book', controller.BookController.create);
 
+router.post('/update/:bookId', controller.BookController.update);
+
 module.exports = router;
