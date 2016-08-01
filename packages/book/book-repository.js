@@ -21,8 +21,8 @@ BookRepository.prototype.detail = function (bookObjectID) {
     return this.collection.findOne({'_id': mongoObjectID.ObjectID(bookObjectID)});
 };
 
-BookRepository.prototype.search = function () {
-
+BookRepository.prototype.search = function (condition) {
+    return this.collection.find(condition.buildKeywordCondition()).toArray();
 };
 
 module.exports = BookRepository;

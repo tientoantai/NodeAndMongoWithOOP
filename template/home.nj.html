@@ -7,7 +7,23 @@
         <h1>List of Books</h1>
     </header>
     <div class="container" id="content">
-        <a href="/add" class="btn btn-success">Add new</a>
+        <div class="row">
+            <div class="col-md-2">
+                <a href="/add" class="btn btn-block btn-success">Add new</a>
+            </div>
+            <div class="col-md-10">
+                <form method="get" action="/search">
+                    <div class="input-group">
+                        <input type="text" name="keyword" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </form>
+            </div>
+        </div>
         <table class="table table-hover">
             <thead>
                 <tr>

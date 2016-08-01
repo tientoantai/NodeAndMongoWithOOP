@@ -16,4 +16,6 @@ router.post('/book', controller.BookController.create);
 
 router.post('/update/:bookId', controller.BookController.update);
 
+router.get('/search', middleware.BookSearchCondition.buildKeywordCondition, controller.BookController.search);
+
 module.exports = router;
