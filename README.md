@@ -1,2 +1,3 @@
-# TrueBanker
-TrueBanker - VnValley &amp; VMWare co-operation  
+# CRUD for fun
+
+from someone with love
